@@ -19,3 +19,8 @@ If you would like to improve this project, I would suggest working on the follow
 - Add a noise reduction filter
 
 It would also be great if someone would try to migrate this project to a WebGL context implementation.
+
+## Dependencies
+Two libs, apart from jQuery, have been used:
+- smp core lib, repository at https://github.com/sergiompereira/smp-js-lib
+- smp utilities and components lib, repository at https://github.com/sergiompereira/js-utils-and-resources
