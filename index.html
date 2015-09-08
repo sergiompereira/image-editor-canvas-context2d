@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+	<head>
+		<meta charset="utf-8"/>
+		<link href="css/styles.css" rel="stylesheet"/>
+		<script type="text/javascript" src="js/EventDispatcher.js" ></script>
+		<script type="text/javascript" src="js/EnterFrame.js" ></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/smp/smp.js"></script>
+		<script src="js/smp/MathUtils.js"></script>
+		<script src="js/smp/ColorUtils.js"></script>
+		<script src="js/smp/BitmapData.js"></script>
+		<script src="js/smp/ConvolutionMatrix.js"></script>
+		<script src="js/smp/ColorPicker.js"></script>
+		<script src="js/DropArea.js"></script>
+		
+	</head>
+	<body>
+		<div id="image-container">
+			<p>Drop an image file onto here.</p>
+		</div>
+		<p class="info-download">When done, click on the image to download it.</p>
+		<form id="editorControls">
+			<fieldset>
+				
+						<label for="saturation" >Saturation : <span>1</span></label>
+						<input id="saturation" type="range" min="0" max="3" step="0.1" value="1" name="saturation" class="filter-input"/><br/>
+					
+						<label for="contrast" >Contrast : <span>1</span></label>
+						<input id="contrast" type="range" min="0" max="3" step="0.1" value="1" name="contrast" class="filter-input"/><br/>
+					
+						<label for="brightness" >Brightness : <span>1</span></label>
+						<input id="brightness" type="range" min="0" max="3" step="0.1" value="1" name="brightness" class="filter-input"/><br/>
+					
+						<label for="colorTemperature" >Color temperature : <span>1</span></label>
+						<input id="colorTemperature" type="range" min="0" max="2" step="0.1" value="1" name="colorTemperature" class="filter-input"/>
+					
+			</fieldset>
+			<fieldset>
+				
+						<label for="red" >Red : <span>1</span></label>
+						<input id="red" type="range" min="0" max="2" step="0.1" value="1" name="red" class="filter-input"/><br/>
+					
+						<label for="green" >Green : <span>1</span></label>
+						<input id="green" type="range" min="0" max="2" step="0.1" value="1" name="green" class="filter-input"/><br/>
+					
+						<label for="blue" >Blue : <span>1</span></label>
+						<input id="blue" type="range" min="0" max="2" step="0.1" value="1" name="blue" class="filter-input"/><br/>
+				
+			</fieldset>
+			<fieldset>
+						<label for="posterize" >Posterize : <span>N</span></label>
+						<input id="posterize" type="range" min="0" max="16" step="1" value="16" name="posterize" class="filter-input"/><br/>
+						<br/>
+					
+						<label for="invert" >Invert :</label>
+						<input id="invert" type="checkbox"   name="invert" class="filter-input"/><br/>
+					
+						<label for="threshold" >Threshold : <span>N</span></label>
+						<input id="threshold" type="range" min="1" max="256" step="1" value="256" name="threshold" class="filter-input"/><br/>
+						
+						<label>Normalize</label><br/>
+						<label for="normalize-dark" >(dark) : <span>N</span></label><input id="normalize-dark" type="range" min="0" max="254" step="1" value="0" name="normalize-dark" class="filter-input"/><br/>
+						<label for="normalize-bright" >(bright) : <span>N</span></label><input id="normalize-bright" type="range" min="1" max="255" step="1" value="255" name="normalize-bright" class="filter-input"/><br/>
+			
+					
+			</fieldset>
+			<fieldset>
+						<label for="monotone" >Monotone:</label>
+						<input id="monotone" type="checkbox"   name="monotone" class="filter-input"/>
+						<label for="monotone-towhite" >(to white)</label>
+						<input id="monotone-towhite" type="checkbox"   name="monotone-towhite" class="filter-input"/><br/>
+						<label for="duotone" >Duotone:</label>
+						<input id="duotone" type="checkbox"   name="duotone" class="filter-input"/>
+						<div>
+							<div style="display:inline-block;">
+								<canvas  class="colorPicker" width="100" height="80"></canvas>
+							</div>
+							<div style="display:inline-block;">
+								<canvas class="colorPicker" width="100" height="80"></canvas>
+							</div>
+						</div>
+			</fieldset>
+			<fieldset>
+						<label for="blur" >Blur : <span>0</span></label>
+						<input id="blur" type="range" min="0" max="4" step="1" value="0" name="blur" class="filter-input"/><br/>
+						<label for="sharpen" >Sharpen : <span>0</span></label>
+						<input id="sharpen" type="range" min="0" max="5" step="1" value="0" name="sharpen" class="filter-input"/><br/>
+					<br/>
+						<label for="edges" >Edges :</label>
+						<input id="edges" type="checkbox"   name="edges" class="filter-input"/><br/>
+						<label for="emboss" >Emboss :</label>
+						<input id="emboss" type="checkbox"   name="emboss" class="filter-input"/><br/>
+						<label for="sobel" >Sobel :</label>
+						<input id="sobel" type="checkbox"   name="sobel" class="filter-input"/><br/>
+						<label for="halftone" >Halftone : threshold <span>0</span></label>
+						<input id="halftone" type="range" min="0" max="255" step="1" value="0" name="halftone" class="filter-input"/><br/>
+						<label for="dither" >Dither : bit size <span>0</span></label>
+						<input id="dither" type="range" min="0" max="16" step="1" value="0" name="dither" class="filter-input"/><br/>
+					
+
+			</fieldset>
+			<!--<input type="button" value="Reset" />-->
+		</form>        
+
+	<script type="text/javascript" src="js/script.js"></script>
+	<body>
+</html>
